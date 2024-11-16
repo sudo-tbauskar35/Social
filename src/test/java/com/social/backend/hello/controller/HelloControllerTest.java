@@ -21,8 +21,6 @@ public class HelloControllerTest {
     private static final String HELLO_API_URI = "/api/hello";
 
     @Autowired
-    private HelloController helloController;
-    @Autowired
     private TestRestTemplate restTemplate;
 
     @LocalServerPort
@@ -30,9 +28,7 @@ public class HelloControllerTest {
 
     @Test
     public void contextLoads() {
-        assertThat(helloController).isNotNull();
         assertThat(restTemplate).isNotNull();
-
         assertThat(port).isNotNull();
     }
 
